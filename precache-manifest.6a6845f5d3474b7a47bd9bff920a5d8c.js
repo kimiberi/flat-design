@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "28c0ad52cf5fc9a85966cadaa336084b",
+    "revision": "933d61e63938d4e484d93a3cc6b57617",
     "url": "/flat-design/index.html"
   },
   {
-    "revision": "5c8cf47e46aa3150707a",
-    "url": "/flat-design/static/css/main.b3e88391.chunk.css"
+    "revision": "9a97203fafe11bf22036",
+    "url": "/flat-design/static/css/main.af36ac62.chunk.css"
   },
   {
     "revision": "87a1fc6d8396416c00ea",
@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/flat-design/static/js/2.8a1ce77b.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "5c8cf47e46aa3150707a",
+    "revision": "9a97203fafe11bf22036",
     "url": "/flat-design/static/js/main.ff32b190.chunk.js"
   },
   {

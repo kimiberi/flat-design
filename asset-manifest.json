@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/flat-design/static/css/main.b3e88391.chunk.css",
+    "main.css": "/flat-design/static/css/main.af36ac62.chunk.css",
     "main.js": "/flat-design/static/js/main.ff32b190.chunk.js",
     "main.js.map": "/flat-design/static/js/main.ff32b190.chunk.js.map",
     "runtime-main.js": "/flat-design/static/js/runtime-main.f8e88817.js",
@@ -8,9 +8,9 @@
     "static/js/2.8a1ce77b.chunk.js": "/flat-design/static/js/2.8a1ce77b.chunk.js",
     "static/js/2.8a1ce77b.chunk.js.map": "/flat-design/static/js/2.8a1ce77b.chunk.js.map",
     "index.html": "/flat-design/index.html",
-    "precache-manifest.c77a7dff6e5be33ea5ff637f1d1fc3c8.js": "/flat-design/precache-manifest.c77a7dff6e5be33ea5ff637f1d1fc3c8.js",
+    "precache-manifest.6a6845f5d3474b7a47bd9bff920a5d8c.js": "/flat-design/precache-manifest.6a6845f5d3474b7a47bd9bff920a5d8c.js",
     "service-worker.js": "/flat-design/service-worker.js",
-    "static/css/main.b3e88391.chunk.css.map": "/flat-design/static/css/main.b3e88391.chunk.css.map",
+    "static/css/main.af36ac62.chunk.css.map": "/flat-design/static/css/main.af36ac62.chunk.css.map",
     "static/js/2.8a1ce77b.chunk.js.LICENSE.txt": "/flat-design/static/js/2.8a1ce77b.chunk.js.LICENSE.txt",
     "static/media/business-design.png": "/flat-design/static/media/business-design.af1c504e.png",
     "static/media/co-employee.png": "/flat-design/static/media/co-employee.2fa1e0e9.png",
@@ -23,7 +23,7 @@
   "entrypoints": [
     "static/js/runtime-main.f8e88817.js",
     "static/js/2.8a1ce77b.chunk.js",
-    "static/css/main.b3e88391.chunk.css",
+    "static/css/main.af36ac62.chunk.css",
     "static/js/main.ff32b190.chunk.js"
   ]
 }
