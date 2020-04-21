@@ -1,0 +1,303 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin flex-type($val) {
+  @if $val == row {
+    display: flex;
+    flex-direction: row;
+  } @else if $val == column {
+    display: flex;
+    flex-direction: column;
+  } @else if $val == center {
+    display: flex;
+    justify-content: center;
+  } @else if $val == flex-end {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+.main-flex {
+  @include flex-type(row);
+  justify-content: space-between;
+  align-items: center;
+}
+
+@for $spacer from 1 through 6 {
+  .spacer-#{$spacer} {
+    height: 35px * $spacer;
+  }
+}
+
+.global-design {
+  padding: 150px 60px 150px 60px;
+  text-align: left;
+
+  h1 {
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+    font-size: 42px;
+    text-transform: uppercase;
+    color: #fff;
+  }
+
+  h2 {
+    @extend h1;
+    font-size: 35px;
+    text-transform: capitalize;
+    color: #ff6764;
+  }
+
+  h3 {
+    @extend h2;
+    font-size: 24px;
+    letter-spacing: 1px;
+  }
+
+  .small-h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    letter-spacing: 2px;
+    color: #ffe6e3;
+  }
+
+  .small-h2 {
+    @extend .small-h1;
+    color: #ff9d92;
+    padding-right: 18px;
+  }
+
+  hr {
+    border-top: 7px solid #ffb2aa;
+    border-bottom: 0px;
+    width: 90px;
+    margin: auto;
+  }
+
+  p.black {
+    color: #161616;
+  }
+
+  p.white {
+    @include flex-type(center);
+    color: #fff;
+  }
+
+  .row-1,
+  .row-2 {
+    padding: 30px;
+  }
+
+  input {
+    margin-right: 3px;
+    height: 45px;
+    width: 300px;
+    font-size: 18px;
+  }
+}
+
+.bg-cloud-pink {
+  background-image: url(./images/darkpink-cloud.png);
+  height: 100px;
+}
+
+.bg-cloud-white {
+  margin-top: -99px;
+  background-image: url(./images/white-cloud.png);
+  height: 100px;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+button {
+  background-color: #016a8a;
+  text-transform: uppercase;
+  color: #fff;
+  cursor: pointer;
+  height: 45px;
+  width: 160px;
+  border: #016a8a;
+  border-radius: 3px;
+}
+
+button:hover {
+  background-color: #01576d;
+}
+
+/* <MainHeader /> */
+header {
+  @extend .main-flex;
+  justify-content: center; // Override the 'space-between'
+  padding: 50px 60px 50px 60px;
+
+  img {
+    height: 500px;
+  }
+
+  .row-1 {
+    @include flex-type(column);
+    color: #999;
+    margin-right: 40px;
+
+    p.slogan {
+      font-size: 35px;
+      color: #161616;
+      letter-spacing: 5px;
+    }
+  }
+}
+
+/* <Nav /> */
+#nav-root {
+  @extend .main-flex;
+  padding: 20px 60px 20px 60px;
+
+  #main-title a {
+    font-family: 'Baloo Paaji 2', cursive;
+    font-size: 30px;
+    letter-spacing: 3px;
+    color: #ff9d92;
+  }
+
+  nav {
+    margin: 0px 15px 0px 15px;
+  }
+
+  nav a {
+    margin-right: 45px;
+    color: #ffd1c9;
+    font-size: 14px;
+    letter-spacing: 2px;
+  }
+
+  nav a#home,
+  nav a:hover {
+    color: #ff6764;
+  }
+
+  nav a:last-child,
+  a.icon-margin:last-child {
+    margin-right: 0;
+  }
+
+  a.icon-margin {
+    margin-right: 30px;
+  }
+
+  img.icon-size {
+    height: 21px;
+    width: 21px;
+  }
+}
+
+/* <About /> */
+section#parent-about {
+  @extend .global-design;
+  margin-top: -1px;
+  padding-bottom: 250px;
+  background-color: #ff6764;
+  text-align: center;
+}
+
+/* <Services /> */
+#parent-services {
+  @extend .global-design;
+  background-color: #fff;
+
+  img {
+    height: 180px;
+  }
+
+  .col-1 {
+    @include flex-type(row);
+    justify-content: center;
+    align-items: baseline;
+  }
+  .col-2 {
+    @extend .main-flex;
+    align-items: flex-start;
+  }
+}
+
+/* <Team /> */
+section#parent-team {
+  @extend .global-design;
+  @extend .main-flex;
+  background-color: #ff6764;
+  color: #fff;
+  margin-top: -1px;
+  padding-bottom: 250px;
+
+  img {
+    height: 400px;
+  }
+  h2 {
+    color: #fff;
+  }
+  .small-h2 {
+    color: #ffe6e3;
+  }
+  .col-1 {
+    @include flex-type(row);
+    justify-content: flex-start;
+    align-items: baseline;
+  }
+}
+
+/* <Contact /> */
+section#parent-contact {
+  @extend .global-design;
+  padding: 150px 0px 0px 0px;
+  background-image: url(./images/redforest.png);
+  margin-top: -100px;
+  color: #fff;
+
+  h2,
+  .small-h2 {
+    color: #5c222a;
+  }
+
+  a {
+    color: #fff;
+    text-decoration: underline;
+  }
+
+  input {
+    padding: 0px 15px 0px 15px;
+  }
+
+  /*FOOTER NOT INCLUDED */
+  section.padding-only {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  .col-1,
+  .col-2 {
+    @include flex-type(row);
+    align-items: baseline;
+    justify-content: center;
+  }
+}
+
+/* <Footer /> */
+footer {
+  @extend .main-flex;
+  padding: 30px 60px 30px 60px;
+  background-color: #161616;
+  opacity: 0.4;
+  font-size: 13px;
+}

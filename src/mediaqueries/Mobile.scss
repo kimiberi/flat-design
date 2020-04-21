@@ -1,0 +1,185 @@
+/* MOBILE PLATFORM */
+@media only screen and (min-device-width: 320px) and (max-device-width: 700px) {
+  @mixin flex-type($val) {
+    @if $val == row {
+      display: flex;
+      flex-direction: row;
+    } @else if $val == column {
+      display: flex;
+      flex-direction: column;
+    } @else if $val == col-reverse {
+      display: flex;
+      flex-direction: column-reverse;
+    } @else if $val == center {
+      display: flex;
+      justify-content: center;
+    } @else if $val == flex-end {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+
+  @for $spacer from 1 through 6 {
+    .spacer-#{$spacer} {
+      height: 15px * $spacer;
+    }
+  }
+
+  .global-design {
+    padding: 30px;
+
+    h1 {
+      font-size: 30px;
+    }
+
+    h2 {
+      @extend h1;
+      font-size: 25px;
+    }
+
+    h3 {
+      @extend h2;
+      font-size: 21px;
+    }
+
+    .small-h1 {
+      font-size: 16px;
+    }
+
+    .small-h2 {
+      @extend .small-h1;
+      padding-right: 0px;
+    }
+
+    .row-1,
+    .row-2 {
+      padding: 0px;
+    }
+
+    input {
+      height: 40px;
+      width: 250px;
+      font-size: 14px;
+    }
+  }
+
+  body {
+    font-size: 14px;
+  }
+
+  button {
+    height: 40px;
+    width: 130px;
+  }
+
+  /* <MainHeader /> */
+  header {
+    @include flex-type(col-reverse);
+    padding: 30px 30px 0px 30px;
+
+    img {
+      height: 230px;
+    }
+
+    .row-1 {
+      margin-right: 0px;
+
+      p.slogan {
+        font-size: 25px;
+        letter-spacing: 3px;
+      }
+    }
+  }
+
+  /* <Nav /> */
+  #nav-root {
+    #main-title a {
+      font-size: 25px;
+    }
+
+    a.icon-margin {
+      margin-right: 10px;
+    }
+
+    img.icon-size {
+      height: 18px;
+      width: 18px;
+    }
+  }
+
+  /* <About /> */
+  section#parent-about {
+    @extend .global-design;
+    padding-bottom: 100px;
+  }
+
+  /* <Services /> */
+  #parent-services {
+    @extend .global-design;
+
+    img {
+      height: 120px;
+    }
+
+    .col-1 {
+      @include flex-type(column);
+
+      span,
+      h2 {
+        display: block;
+        margin: auto;
+      }
+    }
+
+    .col-2 {
+      @include flex-type(column);
+    }
+  }
+
+  /* <Team /> */
+  section#parent-team {
+    @extend .global-design;
+    @include flex-type(column);
+    padding-bottom: 100px;
+
+    img {
+      height: 200px;
+    }
+
+    .col-1 {
+      @include flex-type(column);
+    }
+  }
+
+  /* <Contact /> */
+  section#parent-contact {
+    @extend .global-design;
+    padding: 100px 0px 0px 0px;
+
+    /*FOOTER NOT INCLUDED */
+    section.padding-only {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+
+    .col-1,
+    .col-2 {
+      @include flex-type(column);
+
+      span,
+      h2,
+      input,
+      button {
+        display: block;
+        margin: auto;
+      }
+    }
+  }
+
+  /* <Footer /> */
+  footer {
+    @include flex-type(column);
+    text-align: center;
+    padding: 30px;
+  }
+}

@@ -1,0 +1,83 @@
+/* SUPPOSEDLY: STICKY HEADER & SIDEPANEL STYLES */
+/* overflow: auto; PREVENT SIDEBAR FROM SHOWING A SCROLLBAR ON PAGE */
+#page-wrap {
+  overflow: auto;
+  position: sticky;
+  top: 0;
+  text-align: center;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0px 0px 8px 0px #ccc;
+
+  /*DISCRETION STYLE INSIDE THE STICKY HEADER*/
+  #nav-root {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+/* NAV MENU STYLING */
+.bm-item {
+  #social-icons {
+    display: flex;
+    justify-content: center;
+  }
+
+  a {
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #ffd1c9;
+  }
+  a:hover {
+    color: #ff6764;
+  }
+}
+
+/* READ THIS!!! THE REST COPIED DIRECTLY FROM REACT-BURGER-MENU DOCS */
+
+/* OUTSIDE BUTTON: POSITION AND SIZING OF BURGER BUTTON */
+.bm-burger-button {
+  position: fixed;
+  width: 36px;
+  height: 20px;
+  left: 36px;
+  top: 36px;
+}
+
+/* OUTSIDE BUTTON: COLOR/SHAPE OF BURGER ICON BARS */
+.bm-burger-bars {
+  background: #ff9d92;
+}
+
+/* POSITION AND SIZING OF CLICKABLE CROSS BUTTON */
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+
+/* COLOR/SHAPE OF CLOSE BUTTON CROSS */
+.bm-cross {
+  background: #161616;
+}
+
+/* SIDEBAR STYLES */
+.bm-menu {
+  background: #fff;
+  padding: 60px 30px 60px 30px;
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: #373a47;
+}
+
+/* WRAPPER FOR ITEM LIST */
+.bm-item-list {
+  color: #161616;
+}
+
+/* OVERLAY YOU SEE UPON SHOWING THE SIDEBAR */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+}

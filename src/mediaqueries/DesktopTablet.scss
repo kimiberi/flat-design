@@ -1,0 +1,150 @@
+/* SMALL DESKTOP, LAPTOP AND TABLET PLATFORM */
+@media only screen and (min-device-width: 701px) and (max-device-width: 1030px) {
+  @mixin flex-type($val) {
+    @if $val == row {
+      display: flex;
+      flex-direction: row;
+    } @else if $val == column {
+      display: flex;
+      flex-direction: column;
+    } @else if $val == center {
+      display: flex;
+      justify-content: center;
+    } @else if $val == flex-end {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+
+  @for $spacer from 1 through 6 {
+    .spacer-#{$spacer} {
+      height: 20px * $spacer;
+    }
+  }
+
+  .global-design {
+    padding: 120px 30px 120px 30px;
+
+    h1 {
+      font-size: 35px;
+    }
+
+    h2 {
+      @extend h1;
+      font-size: 28px;
+    }
+
+    h3 {
+      @extend h2;
+      font-size: 24px;
+    }
+
+    .small-h1 {
+      font-size: 20px;
+    }
+
+    .small-h2 {
+      @extend .small-h1;
+      padding-right: 15px;
+    }
+
+    .row-1,
+    .row-2 {
+      padding: 15px;
+    }
+
+    input {
+      height: 40px;
+      width: 250px;
+      font-size: 16px;
+    }
+  }
+
+  button {
+    height: 40px;
+    width: 130px;
+  }
+
+  /* <MainHeader /> */
+  header {
+    padding: 30px;
+
+    img {
+      height: 350px;
+    }
+
+    .row-1 {
+      margin-right: 20px;
+
+      p.slogan {
+        font-size: 30px;
+        letter-spacing: 3px;
+      }
+    }
+  }
+
+  /* <Nav /> */
+  #nav-root {
+    padding: 20px 30px 20px 30px;
+
+    #main-title a {
+      font-size: 25px;
+    }
+
+    nav a {
+      margin-right: 25px;
+    }
+
+    a.icon-margin {
+      margin-right: 10px;
+    }
+
+    img.icon-size {
+      height: 18px;
+      width: 18px;
+    }
+  }
+
+  /* <About /> */
+  section#parent-about {
+    @extend .global-design;
+    padding-bottom: 200px;
+  }
+
+  /* <Services /> */
+  #parent-services {
+    @extend .global-design;
+
+    img {
+      height: 120px;
+    }
+  }
+
+  /* <Team /> */
+  section#parent-team {
+    @extend .global-design;
+    @include flex-type(column);
+    padding-bottom: 200px;
+
+    img {
+      height: 270px;
+    }
+  }
+
+  /* <Contact /> */
+  section#parent-contact {
+    @extend .global-design;
+    padding: 120px 0px 0px 0px;
+
+    /*FOOTER NOT INCLUDED */
+    section.padding-only {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+  }
+
+  /* <Footer /> */
+  footer {
+    padding: 30px;
+  }
+}
